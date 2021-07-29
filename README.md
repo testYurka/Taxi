@@ -1,5 +1,3 @@
-"# Taxi" 
-
 ##This project simulates taxi service's work.
 
 **Functionality**:
