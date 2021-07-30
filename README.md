@@ -1,8 +1,8 @@
-##This project simulates taxi service's work.
+## This project simulates taxi service's work.
 
 **Functionality**:
 
-  As a user you can be a driver. Fo r this you must register or login, using login and password.
+  As a user you can be a driver. For this you must register or login, using login and password.
   After this action you can see information about another drivers, cars, drivers cars, assign driver to a car.
   Without registration you can only add new driver.
   The project was written using N-tier architecture, used  Injector(that simulate Spring's working) and reflection API. 
