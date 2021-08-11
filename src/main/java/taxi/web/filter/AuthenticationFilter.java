@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class AuthentificationFilter implements Filter {
+public class AuthenticationFilter implements Filter {
     private static final String DRIVER_ID = "driver_id";
-    private Set<String> allowedUrls = new HashSet<>();
+    private final Set<String> allowedUrls = new HashSet<>();
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
         allowedUrls.add("/");
         allowedUrls.add("/login");
         allowedUrls.add("/drivers/add");

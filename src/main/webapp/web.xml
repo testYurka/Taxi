@@ -114,7 +114,7 @@
     </servlet-mapping>
     <filter>
         <filter-name>authenticationFilter</filter-name>
-        <filter-class>taxi.web.filter.AuthentificationFilter</filter-class>
+        <filter-class>taxi.web.filter.AuthenticationFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>authenticationFilter</filter-name>

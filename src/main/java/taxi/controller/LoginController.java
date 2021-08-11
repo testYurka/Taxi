@@ -12,8 +12,8 @@ import taxi.model.Driver;
 import taxi.service.AuthentificationService;
 
 public class LoginController extends HttpServlet {
-    private Injector injector = Injector.getInstance("taxi");
-    private AuthentificationService authentificationService = (AuthentificationService)
+    private final Injector injector = Injector.getInstance("taxi");
+    private final AuthentificationService authentificationService = (AuthentificationService)
             injector.getInstance(AuthentificationService.class);
 
     @Override

@@ -1,4 +1,4 @@
-package taxi.dao;
+package taxi.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import taxi.dao.CarDao;
 import taxi.exception.DataProcessingException;
 import taxi.lib.Dao;
 import taxi.model.Car;
@@ -223,7 +224,7 @@ public class CarDaoImpl implements CarDao {
     }
 
     private Driver parseDriverFromResultSet(ResultSet resultSet) throws SQLException {
-        long driverId = resultSet.getObject("id", Long.class );
+        long driverId = resultSet.getObject("id", Long.class);
         String name = resultSet.getNString("name");
         String licenseNumber = resultSet.getNString("license_number");
         Driver driver = new Driver(name, licenseNumber);
@@ -237,7 +238,7 @@ public class CarDaoImpl implements CarDao {
         String manufacturerCountry = resultSet.getNString("manufacturer_country");
         Manufacturer manufacturer = new Manufacturer(manufacturerName, manufacturerCountry);
         manufacturer.setId(manufacturerId);
-        long carId = resultSet.getLong("id");
+        long carId = resultSet.getObject("id", Long.class);
         String model = resultSet.getNString("model");
         Car car = new Car(model, manufacturer);
         car.setId(carId);
